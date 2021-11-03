@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" = "hex" ]; then
+  openssl rand -hex $2
+  exit
+fi
+
+cat /dev/urandom | base64 | fold -w $1 | head -n 1
