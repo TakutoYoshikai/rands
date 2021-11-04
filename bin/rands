@@ -11,6 +11,12 @@ function generate(_chars, len) {
   console.log(str);
 }
 
+if (process.argv[2] === "decimal") {
+  const len = parseInt(process.argv[3]);
+  generate("0123456789", len);
+  process.exit();
+}
+
 if (process.argv[2] === "hex") {
   const len = parseInt(process.argv[3]);
   generate("0123456789abcdef", len);
