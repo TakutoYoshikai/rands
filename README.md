@@ -27,5 +27,10 @@ rands 10 abcd
 rands hex <LENGTH>
 ```
 
+**generate random number string**
+```bash
+rands decimal <LENGTH>
+```
+
 ### License
 MIT License
