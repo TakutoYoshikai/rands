@@ -16,7 +16,6 @@ npm install -g TakutoYoshikai/rands
 rands <LENGTH>
 
 # specify characters
-
 rands <LENGTH> <CHARACTERS>
 # example 
 rands 10 abcd
