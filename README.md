@@ -15,7 +15,16 @@ npm install -g TakutoYoshikai/rands
 ```bash
 rands <LENGTH>
 
-# hex
+# specify characters
+
+rands <LENGTH> <CHARACTERS>
+# example 
+rands 10 abcd
+# cacadbabdb
+```
+
+**generate random hex string**
+```bash
 rands hex <LENGTH>
 ```
 
