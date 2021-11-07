@@ -4,33 +4,31 @@
 function generate(_chars, len) {
   const chars = _chars.split("");
 
-  let str = "";
   for (let i = 0; i < len; i++) {
-    str += chars[Math.floor(Math.random() * chars.length)];
+    process.stdout.write(chars[Math.floor(Math.random() * chars.length)]);
   }
-  console.log(str);
 }
 
 if (process.argv[2] === "decimal") {
-  const len = parseInt(process.argv[3]);
+  const len = Number(process.argv[3]);
   generate("0123456789", len);
   process.exit();
 }
 
 if (process.argv[2] === "hex") {
-  const len = parseInt(process.argv[3]);
+  const len = Number(process.argv[3]);
   generate("0123456789abcdef", len);
   process.exit();
 }
 
 if (process.argv.length === 4) {
-  const len = parseInt(process.argv[2]);
+  const len = Number(process.argv[2]);
   generate(process.argv[3], len);
   process.exit();
 }
 
 if (process.argv.length === 3) {
-  const len = parseInt(process.argv[2]);
+  const len = Number(process.argv[2]);
   generate("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", len);
   process.exit();
 }
